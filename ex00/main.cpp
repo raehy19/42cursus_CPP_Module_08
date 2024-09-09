@@ -39,6 +39,8 @@ int main() {
 	try {
 		std::vector<int>::iterator it = easyfind(vec, 3);
 		std::cout << "Vector Value found: " << *it << std::endl;
+		it = easyfind(vec, 7);
+		std::cout << "Vector Value found: " << *it << std::endl;
 	} catch (const std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
@@ -47,6 +49,8 @@ int main() {
 	const std::vector<int> constVec = vec;
 	try {
 		std::vector<int>::const_iterator it = easyfind(constVec, 3);
+		std::cout << "Const Vector Value found: " << *it << std::endl;
+		it = easyfind(constVec, 7);
 		std::cout << "Const Vector Value found: " << *it << std::endl;
 	} catch (const std::exception &e) {
 		std::cout << e.what() << std::endl;
@@ -64,6 +68,8 @@ int main() {
 	try {
 		std::list<int>::iterator it = easyfind(lst, 30);
 		std::cout << "List Value found: " << *it << std::endl;
+		it = easyfind(lst, 35);
+		std::cout << "List Value found: " << *it << std::endl;
 	} catch (const std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
@@ -72,6 +78,8 @@ int main() {
 	const std::list<int> constLst = lst;
 	try {
 		std::list<int>::const_iterator it = easyfind(constLst, 30);
+		std::cout << "Const List Value found: " << *it << std::endl;
+		it = easyfind(constLst, 35);
 		std::cout << "Const List Value found: " << *it << std::endl;
 	} catch (const std::exception &e) {
 		std::cout << e.what() << std::endl;
